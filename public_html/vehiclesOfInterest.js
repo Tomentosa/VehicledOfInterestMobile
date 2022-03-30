@@ -18,7 +18,7 @@
         var VOITable = document.getElementById("VOITable");
         var tableRows = VOITable.getElementsByTagName('tr');   
         var rowCount = VOITable.rows.length;
-alert("get table");
+//alert("get table");
         for (var r = 1; r < rowCount; r++) {
             VOITable.deleteRow(-1);
          }
@@ -34,7 +34,7 @@ alert("get table");
 
             if (request.readyState == 4)
             {
-alert("data " + request.responseText.toString());                
+//alert("data " + request.responseText.toString());                
                parser = new DOMParser();
                vois = parser.parseFromString(request.responseText.toString(),"text/xml");
                voi = vois.documentElement.childNodes;
@@ -48,20 +48,20 @@ alert("data " + request.responseText.toString());
                   var cell2 = row.insertCell(1);
                   var cell3 = row.insertCell(2);
                   var cell4 = row.insertCell(3);
-                  var cell5 = row.insertCell(4);
-                  var cell6 = row.insertCell(5);
-                  var cell7 = row.insertCell(6);
-                  var cell8 = row.insertCell(7);
+                  //var cell5 = row.insertCell(4);
+                  //var cell6 = row.insertCell(5);
+                  //var cell7 = row.insertCell(6);
+                  //var cell8 = row.insertCell(7);
 
                   // Add some text to the new cells:
                   cell1.innerHTML = vois.getElementsByTagName("licensePlate")[i].childNodes[0].nodeValue;
-                  cell2.innerHTML = vois.getElementsByTagName("reason")[(i*2) + 1].childNodes[0].nodeValue;
+                  cell2.innerHTML = vois.getElementsByTagName("vehYear")[i].childNodes[0].nodeValue;
                   cell3.innerHTML = vois.getElementsByTagName("make")[(i*4)+1].childNodes[0].nodeValue;
                   cell4.innerHTML = vois.getElementsByTagName("model")[(i*2)+1].childNodes[0].nodeValue;
-                  cell5.innerHTML = vois.getElementsByTagName("vehYear")[i].childNodes[0].nodeValue;
-                  cell6.innerHTML = vois.getElementsByTagName("color")[i].childNodes[0].nodeValue;
-                  cell7.innerHTML = vois.getElementsByTagName("ownersName")[i].childNodes[0].nodeValue;
-                  cell8.innerHTML = vois.getElementsByTagName("ownersPhone")[i].childNodes[0].nodeValue;
+                  //cell2.innerHTML = vois.getElementsByTagName("reason")[(i*2) + 1].childNodes[0].nodeValue;
+                  //cell6.innerHTML = vois.getElementsByTagName("color")[i].childNodes[0].nodeValue;
+                  //cell7.innerHTML = vois.getElementsByTagName("ownersName")[i].childNodes[0].nodeValue;
+                  //cell8.innerHTML = vois.getElementsByTagName("ownersPhone")[i].childNodes[0].nodeValue;
               } // end of for loop
             }  // end of if statement
             request.close();

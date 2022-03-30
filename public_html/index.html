@@ -11,24 +11,24 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src="vehiclesOfInterest.js"></script>
-
-
     </head>
     <body>
-        <img src="images/banner.png" alt ="Maryland Flag">
-        
-        <button onclick="refreshVOI()">Refresh</button>
+        <div class="header" id="myHeader">
+  <h2>
+            <img src="images/banner.png" alt ="Maryland Flag"
+             width="auto"
+             height="28" />
+            <button onclick="refreshVOI()">Refresh</button>
+        </h2>
+</div>
+          
         <div id="VehiclesOfInterestdiv">
            <table id="VOITable" border="1">
               <tr>
-                 <td>License Plate</td>
-                <td>Reason</td>
+                <td>License Plate</td>
+                <td>Year</td>
                 <td>Make</td>
                 <td>Model</td>
-                <td>Year</td>
-                <td>Color</td>
-                <td>Owner</td>
-                <td>Owner Phone</td>
               </tr>
            </table>
         </div>
