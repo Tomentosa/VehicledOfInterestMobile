@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: white;
+}
+
+.SpacerBar{
+    position: sticky;
+    top: 28px;
+    left: 0;
+    height: 28px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: #cc9900;
+}
+
+.quickCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

@@ -11,26 +11,34 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src="vehiclesOfInterest.js"></script>
+        <link rel="stylesheet" href="jsfcrud.css"/>
     </head>
     <body>
-        <div class="header" id="myHeader">
-  <h2>
-            <img src="images/banner.png" alt ="Maryland Flag"
-             width="auto"
-             height="28" />
-            <button onclick="refreshVOI()">Refresh</button>
-        </h2>
-</div>
-          
-        <div id="VehiclesOfInterestdiv">
-           <table id="VOITable" border="1">
-              <tr>
-                <td>License Plate</td>
-                <td>Year</td>
-                <td>Make</td>
-                <td>Model</td>
-              </tr>
-           </table>
+        <!--        //total column div-->
+        <div class="Scaffold">
+            <div class="header" id="myHeader">
+                <h2>
+                    <img src="images/banner.png" alt ="Maryland Flag"
+                             height="28"
+                             />
+                </h2>
+                <button onclick="refreshVOI()">Refresh</button>
+            </div>
+            <div class="SpacerBar">
+                
+
+            </div>
+
+            <div id="VehiclesOfInterestdiv">
+                <table id="VOITable" border="1">
+                    <tr>
+                        <td>License Plate</td>
+                        <td>Year</td>
+                        <td>Make</td>
+                        <td>Model</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </body>
 </html>

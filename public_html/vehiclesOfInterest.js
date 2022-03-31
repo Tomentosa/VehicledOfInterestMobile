@@ -30,6 +30,7 @@
         var vois, voi;
         request.open("GET", "http://localhost:8080/VehiclesOfInterestWebServices/webresources/model.vehicleofinterest", true);
         request.send();
+        
         request.onreadystatechange = function() {
 
             if (request.readyState == 4)
